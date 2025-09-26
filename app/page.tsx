@@ -5,7 +5,7 @@ import VersionChangeLog from "@/components/shared/version-change-log";
 export default function Home() {
   return (
     <div className="bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900/30 relative overflow-hidden min-h-screen">
-
+      <ReactVideoEditor projectId="test" />
       Go to /remotion-editor page
     </div>
   );

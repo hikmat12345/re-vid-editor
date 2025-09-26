@@ -9,11 +9,14 @@ import { SidebarProvider as EditorSidebarProvider } from '@/components/editor/ve
 import React from 'react'
 import { AppSidebar } from '@/components/editor/version-7.0.0/components/sidebar/app-sidebar'
 import { useOverlays } from '@/components/editor/version-7.0.0/hooks/use-overlays'
-import { DEFAULT_OVERLAYS, } from '@/components/editor/version-7.0.0/constants'
+import { DEFAULT_OVERLAYS, FPS, RENDER_TYPE, } from '@/components/editor/version-7.0.0/constants'
 import { useVideoPlayer } from '@/components/editor/version-7.0.0/hooks/use-video-player'
 import { useAspectRatio } from '@/components/editor/version-7.0.0/hooks/use-aspect-ratio'
 import { Overlay } from '@/components/editor/version-7.0.0/types'
 import { LocalMediaProvider } from '@/components/editor/version-7.0.0/contexts/local-media-context'
+import { renderMedia } from '@remotion/renderer'
+import { useCompositionDuration } from '@/components/editor/version-7.0.0/hooks/use-composition-duration'
+import { useRendering } from '@/components/editor/version-7.0.0/hooks/use-rendering'
 function RemotionEditor() {
     const {
         overlays,
@@ -46,10 +49,23 @@ function RemotionEditor() {
         changeOverlay(updateOverlay.id, () => updateOverlay)
     }
 
+    const { durationInFrames } = useCompositionDuration(overlays)
+    const { width: compositionWidth, height: compositionHeight } = getAspectRatioDimensions()
 
-    //    const { width: compositionWidth, height: compositionHeight} = getAspectRatioDimensions()
+    const inputProps = {
+        overlays,
+        durationInFrames,
+        fps: FPS,
+        width: compositionWidth,
+        height: compositionHeight,
+        src: ""
+    }
 
-
+    const { renderMedia, state } = useRendering(
+        "TestComponent",
+        inputProps,
+        "ssr"
+    )
 
     const editorContextValue: any = {
         overlays,
@@ -77,7 +93,10 @@ function RemotionEditor() {
 
         handleOverlayChange,
 
-        state: {},
+
+        renderMedia,
+        state,
+        renderType: RENDER_TYPE,
 
         durationInFrames: 300,
         durationInSeconds: 10,

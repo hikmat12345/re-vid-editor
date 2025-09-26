@@ -21,7 +21,9 @@ const nextConfig = {
         // Windows
         "@remotion/compositor-win32-x64": false,
         "@remotion/compositor-windows-x64": false,
-
+        fs: false,
+        path: false,
+        child_process: false,
         // Handle esbuild
         esbuild: false,
       },
@@ -39,6 +41,7 @@ const nextConfig = {
       "@remotion/bundler",
       "@remotion/renderer",
       "esbuild",
+      '@remotion/install-whisper-cpp'
     ],
   },
 };

@@ -42,6 +42,7 @@ import { StickersPanel } from "../overlays/stickers/stickers-panel";
 import { TemplateOverlayPanel } from "../overlays/templates/template-overlay-panel";
 import { useEditorContext } from "../../contexts/editor-context";
 import { Button } from "@/components/ui/button";
+import MediaUploader from "../overlays/custom-media-upload/media-uploader";
 /**
  * AppSidebar Component
  *
@@ -75,6 +76,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         return "Textd";
       case OverlayType.ANIMATION:
         return "Animation";
+      case OverlayType.CUSTOM:
+        return "Custom"
       default:
         return "Unknown";
     }
@@ -144,6 +147,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       panel: OverlayType.TEMPLATE,
       type: OverlayType.TEMPLATE,
     },
+    {
+      title: getPanelTitle(OverlayType.CUSTOM),
+      url: "#",
+      icon: FolderOpen,
+      panel: OverlayType.CUSTOM,
+      type: OverlayType.CUSTOM,
+    },
 
   ];
 
@@ -169,6 +179,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         return <LocalMediaPanel />;
       case OverlayType.TEMPLATE:
         return <TemplateOverlayPanel />;
+      case OverlayType.CUSTOM:
+        return <MediaUploader />;
       default:
         return null;
     }
