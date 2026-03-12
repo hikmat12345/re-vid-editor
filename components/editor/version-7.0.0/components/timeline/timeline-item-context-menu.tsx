@@ -55,23 +55,23 @@ export const TimelineItemContextMenu: React.FC<
   return (
     <ContextMenu onOpenChange={onOpenChange}>
       <ContextMenuTrigger className="z-[100]">{children}</ContextMenuTrigger>
-      <ContextMenuContent className="dark:bg-slate-900 dark:border-slate-800">
+      <ContextMenuContent className="dark:bg-black dark:border-slate-800">
         <ContextMenuItem
-          className="dark:hover:bg-slate-800 dark:focus:bg-slate-800 dark:text-slate-200"
+          className="dark:hover:bg-zinc-950 dark:focus:bg-zinc-950 dark:text-slate-200"
           onClick={() => onDeleteItem(itemId)}
         >
           <Trash2 className="mr-4 h-4 w-4" />
           Delete
         </ContextMenuItem>
         <ContextMenuItem
-          className="dark:hover:bg-slate-800 dark:focus:bg-slate-800 dark:text-slate-200"
+          className="dark:hover:bg-zinc-950 dark:focus:bg-zinc-950 dark:text-slate-200"
           onClick={() => onDuplicateItem(itemId)}
         >
           <Copy className="mr-4 h-4 w-4" />
           Duplicate
         </ContextMenuItem>
         <ContextMenuItem
-          className="dark:hover:bg-slate-800 dark:focus:bg-slate-800 dark:text-slate-200"
+          className="dark:hover:bg-zinc-950 dark:focus:bg-zinc-950 dark:text-slate-200"
           onClick={() => onSplitItem(itemId)}
         >
           <Scissors className="mr-4 h-4 w-4" />

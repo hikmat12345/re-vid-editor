@@ -56,7 +56,7 @@ export function EditorHeader() {
   return (
     <header
       className="sticky top-0 flex shrink-0 items-center gap-2.5 
-      bg-white dark:bg-gray-900/10
+      bg-white dark:bg-black/10
       border-l 
       border-b border-gray-200 dark:border-gray-800
       p-2.5 px-4.5"

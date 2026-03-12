@@ -81,7 +81,7 @@ export const TimelineKeyframes: React.FC<TimelineKeyframesProps> = ({
   return (
     <div
       ref={containerRef}
-      className="flex h-full overflow-hidden w-full bg-slate-100 dark:bg-gray-900"
+      className="flex h-full overflow-hidden w-full bg-slate-100 dark:bg-black"
     >
       <div className="flex h-full w-full">
         {displayFrames.map((frame, index) => {

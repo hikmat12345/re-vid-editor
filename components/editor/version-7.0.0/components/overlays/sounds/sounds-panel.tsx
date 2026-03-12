@@ -162,8 +162,8 @@ const SoundsPanel: React.FC = () => {
     <div
       key={sound.id}
       onClick={() => handleAddToTimeline(sound)}
-      className="group flex items-center gap-3 p-2.5 bg-white dark:bg-gray-900 rounded-md 
-        border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900
+      className="group flex items-center gap-3 p-2.5 bg-white dark:bg-black rounded-md 
+        border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-black
         transition-all duration-150 cursor-pointer"
     >
       <Button
@@ -173,7 +173,7 @@ const SoundsPanel: React.FC = () => {
           e.stopPropagation();
           togglePlay(sound.id);
         }}
-        className="h-8 w-8 rounded-full bg-transparent hover:bg-gray-100 dark:hover:bg-gray-900 
+        className="h-8 w-8 rounded-full bg-transparent hover:bg-gray-100 dark:hover:bg-black 
           text-gray-700 dark:text-gray-300"
       >
         {playingTrack === sound.id ? (
@@ -194,7 +194,7 @@ const SoundsPanel: React.FC = () => {
   );
 
   return (
-    <div className="space-y-4 p-4 bg-gray-50 dark:bg-gray-900/40 h-full">
+    <div className="space-y-4 p-4 bg-gray-50 dark:bg-black/40 h-full">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-sm">Saved Uploads</h2>
         <div>

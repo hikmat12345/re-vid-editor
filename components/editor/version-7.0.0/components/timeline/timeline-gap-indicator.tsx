@@ -59,7 +59,7 @@ export default function GapIndicator({
         }}
       />
       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-0 bottom-0 left-0 right-0 w-full h-full flex items-center justify-center">
-        <div className="bg-slate-900/60 dark:bg-black/70 rounded-full p-1.5 backdrop-blur-sm">
+        <div className="bg-black/60 dark:bg-black/70 rounded-full p-1.5 backdrop-blur-sm">
           <CloseIcon />
         </div>
       </div>

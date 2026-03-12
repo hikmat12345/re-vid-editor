@@ -231,7 +231,7 @@ export const CaptionsPanel: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-4 bg-white dark:bg-gray-900/40">
+    <div className="flex flex-col gap-6 p-4 bg-white dark:bg-black/40">
       {!localOverlay ? (
         <>
           <div className="space-y-4">
@@ -316,7 +316,7 @@ export const CaptionsPanel: React.FC = () => {
               <div className="relative">
                 <div className="absolute inset-x-0 -top-3 flex items-center justify-center">
                   <span
-                    className="px-3 py-1 text-xs text-gray-600 dark:text-gray-500 bg-white dark:bg-gray-900 
+                    className="px-3 py-1 text-xs text-gray-600 dark:text-gray-500 bg-white dark:bg-black 
                   rounded-full border border-gray-200 dark:border-gray-800"
                   >
                     or

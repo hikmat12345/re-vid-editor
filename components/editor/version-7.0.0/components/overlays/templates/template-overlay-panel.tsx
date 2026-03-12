@@ -72,7 +72,7 @@ export const TemplateOverlayPanel: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col gap-2 p-2 sm:gap-4 sm:p-4 bg-gray-100/40 dark:bg-gray-900/40 h-full scrollbar-hide overflow-hidden">
+    <div className="flex flex-col gap-2 p-2 sm:gap-4 sm:p-4 bg-gray-100/40 dark:bg-black/40 h-full scrollbar-hide overflow-hidden">
       <>
         <div className="flex gap-2">
           <form onSubmit={handleSearch} className="flex-1 flex gap-2">

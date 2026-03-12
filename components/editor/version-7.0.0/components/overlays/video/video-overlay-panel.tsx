@@ -131,7 +131,7 @@ export const VideoOverlayPanel: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4 bg-gray-100/40 dark:bg-gray-900/40 h-full">
+    <div className="flex flex-col gap-4 p-4 bg-gray-100/40 dark:bg-black/40 h-full">
       {!localOverlay ? (
         <>
           <form onSubmit={handleSearch} className="flex gap-2">

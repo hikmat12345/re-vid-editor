@@ -292,7 +292,7 @@ const Timeline: React.FC<TimelineProps> = ({
     <div className="flex flex-col">
       <div className="flex ">
         {/* Row Drag Handles Column */}
-        <div className="hidden md:block w-7 flex-shrink-0 border-l border-r border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
+        <div className="hidden md:block w-7 flex-shrink-0 border-l border-r border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-black/50">
           {/* Match TimeMarkers height */}
           <div className="h-[1.3rem] bg-gray-100 dark:bg-gray-800/50" />
 
@@ -306,7 +306,7 @@ const Timeline: React.FC<TimelineProps> = ({
                 key={`drag-${rowIndex}`}
                 className={`flex-1 flex items-center justify-center transition-all duration-200 
                   ${dragOverRowIndex === rowIndex
-                    ? "bg-blue-50 dark:bg-blue-900/20 border-2 border-dashed border-blue-300 dark:border-blue-500"
+                    ? "bg-blue-50 dark:bg-black/20 border-2 border-dashed border-blue-300 dark:border-blue-500"
                     : ""
                   }
                   ${draggedRowIndex === rowIndex
@@ -353,7 +353,7 @@ const Timeline: React.FC<TimelineProps> = ({
         >
           <div
             ref={timelineRef}
-            className="pr-2 pb-2 relative bg-white dark:bg-gray-900"
+            className="pr-2 pb-2 relative bg-white dark:bg-black"
             style={{
               width: `${100 * zoomScale}%`,
               minWidth: "100%",
@@ -420,7 +420,7 @@ const Timeline: React.FC<TimelineProps> = ({
                 isInitialLoad &&
                 shouldShowInitialLoader && (
                   <div
-                    className="absolute inset-0 bg-white/60 dark:bg-gray-900/60 backdrop-blur-[1px] flex items-center justify-center z-50"
+                    className="absolute inset-0 bg-white/60 dark:bg-black/60 backdrop-blur-[1px] flex items-center justify-center z-50"
                     style={{ willChange: "opacity" }}
                   >
                     <div className="flex items-center gap-2 px-3 py-2 bg-white/90 dark:bg-gray-800/90 rounded-lg shadow-sm ring-1 ring-black/5 dark:ring-white/10">

@@ -198,7 +198,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
   };
 
   return (
-    <div className="flex justify-between items-center border-b border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-900/30 px-3 py-3 backdrop-blur-sm border-l">
+    <div className="flex justify-between items-center border-b border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-black/30 px-3 py-3 backdrop-blur-sm border-l">
       {/* Left section: Undo/Redo & Loading */}
       <div className="flex items-center gap-1 flex-1 justify-start">
         <TooltipProvider delayDuration={50}>
@@ -217,7 +217,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
             <TooltipContent
               side="top"
               sideOffset={5}
-              className="bg-white dark:bg-gray-900 text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-black text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
               align="start"
             >
               <div className="flex items-center gap-1">
@@ -244,7 +244,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
             <TooltipContent
               side="top"
               sideOffset={5}
-              className="bg-white dark:bg-gray-900 text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-black text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
               align="start"
             >
               <div className="flex items-center gap-1">
@@ -259,7 +259,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
 
         {/* Loading Indicator - Moved here and simplified */}
         {!SHOW_LOADING_PROJECT_ALERT && isLoadingAssets && (
-          <div className="flex items-center gap-2 px-2 py-1 bg-blue-50/90 dark:bg-blue-900/20 rounded-md ml-2">
+          <div className="flex items-center gap-2 px-2 py-1 bg-blue-50/90 dark:bg-black/20 rounded-md ml-2">
             <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600 dark:text-blue-400" />
             <span className="text-xs font-medium text-blue-700 dark:text-blue-300">
               Loading...
@@ -282,7 +282,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="min-w-[100px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700"
+            className="min-w-[100px] bg-white dark:bg-black border border-gray-200 dark:border-gray-700"
             align="center"
           >
             {[0.25, 0.5, 1, 1.5, 2].map((speed) => (
@@ -319,7 +319,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
             <TooltipContent
               side="top"
               sideOffset={5}
-              className="bg-white dark:bg-gray-900 text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-black text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
               align="center"
             >
               <div className="flex items-center gap-1">
@@ -366,7 +366,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
               <TooltipContent
                 side="top"
                 sideOffset={5}
-                className="bg-white dark:bg-gray-900 text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
+                className="bg-white dark:bg-black text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
                 align="center"
               >
                 <span className="text-gray-700 dark:text-zinc-200">
@@ -400,7 +400,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
               <TooltipContent
                 side="top"
                 sideOffset={5}
-                className="bg-white dark:bg-gray-900 text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
+                className="bg-white dark:bg-black text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
                 align="center"
               >
                 <span className="text-gray-700 dark:text-zinc-200">
@@ -427,7 +427,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
             <TooltipContent
               side="top"
               sideOffset={5}
-              className="bg-white dark:bg-gray-900 text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-black text-xs px-2 py-1 rounded-md z-[9999] border border-gray-200 dark:border-gray-700"
               align="end"
             >
               <span className="text-gray-700 dark:text-zinc-200">
@@ -451,7 +451,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-60 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700"
+            className="w-60 bg-white dark:bg-black border border-gray-200 dark:border-gray-700"
             side="top"
             align="end"
             sideOffset={8}
@@ -509,7 +509,7 @@ export const TimelineControls: React.FC<TimelineControlsProps> = ({
                     className={`h-8 transition-colors ${
                       aspectRatio === ratio
                         ? "bg-blue-600 hover:bg-blue-500 text-white border-0"
-                        : "bg-gray-100 dark:bg-gray-900/50 border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-700 dark:text-zinc-300"
+                        : "bg-gray-100 dark:bg-black/50 border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-700 dark:text-zinc-300"
                     }`}
                   >
                     {ratio}

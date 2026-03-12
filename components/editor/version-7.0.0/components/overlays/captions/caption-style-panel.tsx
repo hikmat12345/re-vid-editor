@@ -65,7 +65,7 @@ export const CaptionStylePanel: React.FC<CaptionStylePanelProps> = ({
               }`}
           >
             {/* Preview Area with demo text */}
-            <div className="relative aspect-[16/7] w-full overflow-hidden bg-gray-900/90 dark:from-black/40 dark:to-gray-900/40">
+            <div className="relative aspect-[16/7] w-full overflow-hidden bg-black/90 dark:from-black/40 dark:to-black/40">
               <div className="absolute inset-0 flex items-center justify-center p-10">
                 <span
                   style={{
@@ -91,7 +91,7 @@ export const CaptionStylePanel: React.FC<CaptionStylePanelProps> = ({
             </div>
 
             {/* Template Info and Color Palette */}
-            <div className="flex items-center justify-between p-3 bg-white/50 dark:bg-gray-900/40 backdrop-blur-sm">
+            <div className="flex items-center justify-between p-3 bg-white/50 dark:bg-black/40 backdrop-blur-sm">
               {/* Template Name and Status */}
               <div className="flex items-center gap-2">
                 <span className="text-xs font-medium text-gray-700 dark:text-gray-200">

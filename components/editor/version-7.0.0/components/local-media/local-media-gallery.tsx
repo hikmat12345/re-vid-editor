@@ -91,7 +91,7 @@ export function LocalMediaGallery({
     switch (selectedFile.type) {
       case "image":
         return (
-          <div className="relative bg-gray-50 dark:bg-gray-900 rounded-lg p-2">
+          <div className="relative bg-gray-50 dark:bg-black rounded-lg p-2">
             <img
               src={selectedFile.path}
               alt={selectedFile.name}
@@ -101,7 +101,7 @@ export function LocalMediaGallery({
         );
       case "video":
         return (
-          <div className="relative bg-gray-50 dark:bg-gray-900 rounded-lg p-2">
+          <div className="relative bg-gray-50 dark:bg-black rounded-lg p-2">
             <video
               src={selectedFile.path}
               controls
@@ -113,8 +113,8 @@ export function LocalMediaGallery({
         );
       case "audio":
         return (
-          <div className="flex flex-col items-center space-y-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
-            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+          <div className="flex flex-col items-center space-y-3 p-4 bg-gray-50 dark:bg-black rounded-lg">
+            <div className="w-12 h-12 bg-blue-100 dark:bg-black/30 rounded-full flex items-center justify-center">
               <Music className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <audio
@@ -155,7 +155,7 @@ export function LocalMediaGallery({
             <img
               src={file.thumbnail || file.path}
               alt={file.name}
-              className="w-full h-full object-cover bg-gray-50 dark:bg-gray-900"
+              className="w-full h-full object-cover bg-gray-50 dark:bg-black"
             />
           )}
           {file.type === "video" && (
@@ -163,7 +163,7 @@ export function LocalMediaGallery({
               <img
                 src={file.thumbnail}
                 alt={file.name}
-                className="w-full h-full object-cover bg-gray-50 dark:bg-gray-900"
+                className="w-full h-full object-cover bg-gray-50 dark:bg-black"
               />
               <div className="absolute bottom-1.5 right-1.5 bg-black/75 dark:bg-black/90 text-white text-xs px-1.5 py-0.5 rounded-md">
                 {formatDuration(file.duration)}
@@ -171,7 +171,7 @@ export function LocalMediaGallery({
             </>
           )}
           {file.type === "audio" && (
-            <div className="w-full h-full flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+            <div className="w-full h-full flex items-center justify-center bg-gray-50 dark:bg-black">
               <Music className="w-10 h-10 text-gray-400 dark:text-gray-500" />
             </div>
           )}

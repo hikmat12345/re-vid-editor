@@ -43,6 +43,7 @@ import { TemplateOverlayPanel } from "../overlays/templates/template-overlay-pan
 import { useEditorContext } from "../../contexts/editor-context";
 import { Button } from "@/components/ui/button";
 import MediaUploader from "../overlays/custom-media-upload/media-uploader";
+import { useTheme } from "next-themes";
 /**
  * AppSidebar Component
  *
@@ -57,7 +58,7 @@ import MediaUploader from "../overlays/custom-media-upload/media-uploader";
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { activePanel, setActivePanel, setIsOpen } = useSidebar();
   const { setSelectedOverlayId, selectedOverlayId } = useEditorContext();
-
+  const { theme } = useTheme();
   const getPanelTitle = (type: OverlayType): string => {
     switch (type) {
       case OverlayType.VIDEO:
@@ -185,6 +186,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         return null;
     }
   };
+  console.log(theme, 'theme');
 
   return (
     <Sidebar
@@ -203,12 +205,23 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuButton size="lg" asChild className="md:h-8 md:py-4">
                 <a href="#">
                   <div className="flex aspect-square size-9 items-center justify-center rounded-lg">
-                    <Image
-                      src="/icons/logo-rve.png"
-                      alt="Logo"
-                      width={27}
-                      height={27}
-                    />
+                    {
+                      theme === 'dark' ? (
+                        <Image
+                          src="/logos/favicon.png"
+                          alt="Logo"
+                          width={32}
+                          height={32}
+                        />
+                      ) : (
+                        <Image
+                          src="/logos/dashboard-white-them.png"
+                          alt="Logo"
+                          width={32}
+                          height={32}
+                        />
+                      )
+                    }
                   </div>
                 </a>
               </SidebarMenuButton>

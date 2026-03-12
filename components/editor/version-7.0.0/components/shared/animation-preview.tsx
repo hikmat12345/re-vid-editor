@@ -169,7 +169,7 @@ const AnimationSection: React.FC<AnimationSectionProps> = ({
           </svg>
         </CollapsibleTrigger>
         <CollapsibleContent>
-          <div className="p-2 bg-white dark:bg-gray-900/50">
+          <div className="p-2 bg-white dark:bg-black/50">
             <div className="grid grid-cols-4 gap-3">{children}</div>
           </div>
         </CollapsibleContent>

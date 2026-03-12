@@ -35,7 +35,7 @@ export default function VersionChangeLog() {
             {versions.map((version, index) => (
               <article
                 key={version.version}
-                className={`relative group bg-slate-800 md:p-8 p-4 md:mb-0 mb-10 rounded-lg border border-gray-700 ${
+                className={`relative group bg-zinc-950 md:p-8 p-4 md:mb-0 mb-10 rounded-lg border border-gray-700 ${
                   version.status !== "Archived" ? "hover:border-blue-200" : ""
                 }`}
               >

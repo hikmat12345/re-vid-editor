@@ -126,7 +126,7 @@ export const ImageOverlayPanel: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4 bg-white dark:bg-gray-900/50 h-full">
+    <div className="flex flex-col gap-4 p-4 bg-white dark:bg-black/50 h-full">
       {!localOverlay ? (
         <>
           <form onSubmit={handleSearch} className="flex gap-2">

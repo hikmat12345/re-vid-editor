@@ -219,7 +219,7 @@ const Sidebar = React.forwardRef<
         className={cn(
           "group peer hidden md:block",
           "text-gray-700 dark:text-gray-300",
-          "bg-white dark:bg-gray-900",
+          "bg-white dark:bg-black",
           "border-gray-200 dark:border-gray-800",
           className
         )}

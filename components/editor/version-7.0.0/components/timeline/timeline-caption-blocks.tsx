@@ -56,7 +56,7 @@ const TimelineCaptionBlocks: React.FC<TimelineCaptionBlocksProps> = ({
 
     return (
       <div className="absolute inset-0 flex items-center z-20">
-        <div className="flex items-center text-[9px] rounded px-1.5 py-0.5 mx-1 group-hover:mx-6 active:mx-6 selection:mx-6 transition-all duration-200 ease-in-out bg-blue-900/90 text-blue-200 min-w-0">
+        <div className="flex items-center text-[9px] rounded px-1.5 py-0.5 mx-1 group-hover:mx-6 active:mx-6 selection:mx-6 transition-all duration-200 ease-in-out bg-black/90 text-blue-200 min-w-0">
           <div className="flex items-center gap-0.5 min-w-0">
             <Type className="w-2 h-2 flex-shrink-0" />
             <span className="capitalize truncate min-w-[20px] max-w-[80px]">

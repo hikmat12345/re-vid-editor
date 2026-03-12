@@ -183,7 +183,7 @@ export function StickersPanel() {
   );
 
   return (
-    <div className="flex flex-col gap-4 p-4 bg-white dark:bg-gray-900/50 h-full">
+    <div className="flex flex-col gap-4 p-4 bg-white dark:bg-black/50 h-full">
       <Tabs defaultValue={stickerCategories[0]} className="w-full">
         <TabsList className="w-full flex space-x-1 bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-1">
           {stickerCategories.map((category) => (

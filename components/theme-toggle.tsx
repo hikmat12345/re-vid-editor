@@ -14,7 +14,7 @@ export function ThemeToggle() {
         checked={theme === "dark"}
         onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
         className="
-          data-[state=checked]:bg-slate-800 
+          data-[state=checked]:bg-zinc-950 
           data-[state=unchecked]:bg-slate-200
           dark:data-[state=unchecked]:bg-slate-700"
       />

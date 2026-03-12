@@ -211,11 +211,11 @@ export function MobileNavBar() {
 
   return (
     <>
-      <div className="md:hidden flex flex-col border-t border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-900/30 backdrop-blur-sm">
+      <div className="md:hidden flex flex-col border-t border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-black/30 backdrop-blur-sm">
         <div className="relative flex-1 flex">
           {/* Left fade gradient to indicate scrollable content */}
           {showScrollIndicator && (
-            <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-white/90 to-transparent dark:from-gray-900/90 z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-white/90 to-transparent dark:from-black/90 z-10 pointer-events-none" />
           )}
 
           <div
@@ -272,7 +272,7 @@ export function MobileNavBar() {
 
           {/* Right fade gradient to indicate scrollable content */}
           {showScrollIndicator && (
-            <div className="absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-white/90 to-transparent dark:from-gray-900/90 z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-white/90 to-transparent dark:from-black/90 z-10 pointer-events-none" />
           )}
         </div>
 

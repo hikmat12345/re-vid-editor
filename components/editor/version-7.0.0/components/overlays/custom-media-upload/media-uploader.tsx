@@ -243,7 +243,7 @@ export default function MediaUploader() {
     }
 
     return (
-        <div className="flex flex-col gap-4 p-4 bg-white dark:bg-gray-900/50 h-full">
+        <div className="flex flex-col gap-4 p-4 bg-white dark:bg-black/50 h-full">
             {/* Text Input Section */}
             <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Add Text</label>
@@ -315,7 +315,7 @@ export default function MediaUploader() {
 
             {/* Transcription Info */}
             {transcriptionLoading && (
-                <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-md">
+                <div className="p-3 bg-blue-50 dark:bg-black/20 rounded-md">
                     <p className="text-sm text-blue-700 dark:text-blue-300">
                         Transcribing audio... This may take a few moments.
                     </p>
@@ -474,7 +474,7 @@ export default function MediaUploader() {
 //     }
 
 //     return (
-//         <div className="flex flex-col gap-4 p-4 bg-white dark:bg-gray-900/50 h-full">
+//         <div className="flex flex-col gap-4 p-4 bg-white dark:bg-black/50 h-full">
 //             {/* Text Input Section */}
 //             <div className="space-y-2">
 //                 <label className="text-sm font-medium text-foreground">Add Text</label>

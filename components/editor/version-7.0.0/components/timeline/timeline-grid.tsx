@@ -161,7 +161,7 @@ const TimelineGrid: React.FC<TimelineGridProps> = ({
 
   return (
     <div
-      className="relative overflow-x-auto overflow-y-hidden bg-white dark:bg-gray-900 h-full"
+      className="relative overflow-x-auto overflow-y-hidden bg-white dark:bg-black h-full"
       style={{ height: `${visibleRows * ROW_HEIGHT}px` }}
     >
       {/* Container for Rows and Alignment Lines */}
@@ -202,7 +202,7 @@ const TimelineGrid: React.FC<TimelineGridProps> = ({
                 transition-all duration-200 ease-in-out
                 hover:bg-slate-200/90 dark:hover:bg-gray-700/90
                 ${dragOverRowIndex === rowIndex
-                  ? "border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                  ? "border-2 border-blue-500 bg-blue-50 dark:bg-black/20"
                   : ""
                 }
                 ${draggedRowIndex === rowIndex ? "opacity-50" : ""}

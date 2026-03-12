@@ -138,7 +138,7 @@ export const TextStylePanel: React.FC<TextStylePanelProps> = ({
                     />
                   </PopoverTrigger>
                   <PopoverContent
-                    className="w-[330px] dark:bg-gray-900 border border-gray-700"
+                    className="w-[330px] dark:bg-black border border-gray-700"
                     side="right"
                   >
                     <ColorPicker
@@ -171,7 +171,7 @@ export const TextStylePanel: React.FC<TextStylePanelProps> = ({
                     />
                   </PopoverTrigger>
                   <PopoverContent
-                    className="w-[330px] dark:bg-gray-900 border border-gray-700"
+                    className="w-[330px] dark:bg-black border border-gray-700"
                     side="right"
                   >
                     <ColorPicker
