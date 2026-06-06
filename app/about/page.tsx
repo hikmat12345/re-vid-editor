@@ -19,7 +19,7 @@ const STATS = [
   { value: '10M+', label: 'Generations created' },
   { value: '50K+', label: 'Active creators' },
   { value: '140+', label: 'Countries' },
-  { value: '4.9/5', label: 'Average rating' },
+  { value: '12+', label: 'AI tools in one platform' },
 ];
 
 const VALUES = [
@@ -72,7 +72,9 @@ export default function AboutPage() {
           <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl">
             MotionForce started from a simple frustration: the best AI models were scattered across
             a dozen platforms, each with their own subscription, interface, and learning curve.
-            We built the platform we always wanted — one place to generate, edit, and publish.
+            We built the platform we always wanted — one place to generate images, videos, music, and voice;
+            extract viral clips, add animated captions, create finance data videos, manage your brand kit,
+            and ship everything through an async render pipeline. All in one credit system.
           </p>
         </div>
       </section>

@@ -14,8 +14,13 @@ import {
   Wand2,
   Settings,
   LogOut,
-  ChevronDown,
   Sparkles,
+  Palette,
+  Scissors,
+  Captions,
+  BarChart3,
+  PlaySquare,
+  TrendingUp,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/auth-context';
 import { cn } from '@/lib/utils';
@@ -54,6 +59,21 @@ const NAV: NavSection[] = [
       { label: 'All Stories',     href: '/stories',          icon: Film },
       { label: 'ASMR Creator',   href: '/stories/asmr',     icon: Sparkles },
       { label: 'Remix',          href: '/stories/remix',    icon: Zap },
+    ],
+  },
+  {
+    title: 'Render',
+    items: [
+      { label: 'Render Jobs',     href: '/render',                  icon: PlaySquare },
+    ],
+  },
+  {
+    title: 'Video Tools',
+    items: [
+      { label: 'Brand Kit',       href: '/tools/brand-kit',         icon: Palette },
+      { label: 'Clip Extractor',  href: '/tools/clip-extractor',    icon: Scissors, badge: 'AI' },
+      { label: 'Captions',        href: '/tools/captions',          icon: Captions, badge: 'AI' },
+      { label: 'Finance Video',   href: '/tools/finance-video',     icon: TrendingUp },
     ],
   },
   {

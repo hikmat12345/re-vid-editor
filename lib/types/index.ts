@@ -168,3 +168,148 @@ export interface PricingInfo {
   tools: { upscale2x: number; upscale4x: number; watermarkRemove: number };
   plans: Record<PlanName, PlanInfo>;
 }
+
+// ─── Render Queue ─────────────────────────────────────────────────────────────
+
+export type RenderJobStatus = 'queued' | 'rendering' | 'done' | 'failed' | 'cancelled';
+
+export interface RenderJob {
+  id: string;
+  userId: string;
+  status: RenderJobStatus;
+  templateId: string;
+  payload: Record<string, any>;
+  outputUrl: string | null;
+  thumbnailUrl: string | null;
+  errorMessage: string | null;
+  queueJobId: string | null;
+  creditsCharged: number;
+  estimatedDurationS: number | null;
+  progress: number;
+  webhookUrl: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export type RenderResolution = '1920x1080' | '1080x1920' | '1080x1080' | '3840x2160';
+
+export interface DispatchRenderRequest {
+  compositionId: string;
+  props: Record<string, any>;
+  resolution?: RenderResolution;
+  durationS?: number;
+  webhookUrl?: string;
+  applyBrandKit?: boolean;
+}
+
+// ─── Brand Kit ────────────────────────────────────────────────────────────────
+
+export type WatermarkPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
+
+export interface BrandKit {
+  id: string;
+  userId: string;
+  logoUrl: string | null;
+  primaryColor: string;
+  secondaryColor: string;
+  accentColor: string;
+  fontFamily: string;
+  introUrl: string | null;
+  outroUrl: string | null;
+  watermarkUrl: string | null;
+  watermarkPosition: WatermarkPosition;
+  watermarkOpacity: number;
+  autoApply: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// ─── Caption Engine ───────────────────────────────────────────────────────────
+
+export type CaptionStyle =
+  | 'mrbeast'
+  | 'hormozi'
+  | 'tiktok-karaoke'
+  | 'emoji-auto'
+  | 'cinematic'
+  | 'news-ticker'
+  | 'minimal-white';
+
+export interface CaptionStyleInfo {
+  id: CaptionStyle;
+  label: string;
+  config: {
+    fontFamily: string;
+    fontSize: number;
+    color: string;
+    strokeColor: string;
+    backgroundColor: string;
+    textTransform: string;
+    position: string;
+    wordHighlight: boolean;
+    emojiAuto: boolean;
+    tickerMode: boolean;
+  };
+}
+
+// ─── Clip Extractor ───────────────────────────────────────────────────────────
+
+export interface TranscriptSegment {
+  start: number;
+  end: number;
+  text: string;
+}
+
+export interface ExtractedClip {
+  start: number;
+  end: number;
+  text: string;
+  viralityScore: number;
+  outputUrl: string | null;
+}
+
+export interface ClipExtractionResult {
+  sourceUrl: string;
+  transcript: TranscriptSegment[];
+  clips: ExtractedClip[];
+  creditsCharged: number;
+}
+
+// ─── Finance Templates ────────────────────────────────────────────────────────
+
+export type FinanceChartType =
+  | 'candlestick'
+  | 'line-chart'
+  | 'ohlc'
+  | 'number-reveal'
+  | 'market-summary';
+
+export interface OhlcDataPoint {
+  date: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume?: number;
+}
+
+export interface LineDataPoint {
+  date: number;
+  value: number;
+  label?: string;
+}
+
+export interface NumberRevealData {
+  from: number;
+  to: number;
+  prefix?: string;
+  suffix?: string;
+  label?: string;
+}
+
+export interface MarketSummaryItem {
+  ticker: string;
+  price: number;
+  change: number;
+  changePercent: number;
+}

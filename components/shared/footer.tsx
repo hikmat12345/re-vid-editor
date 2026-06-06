@@ -6,6 +6,10 @@ const PRODUCT_LINKS = [
   { label: 'AI Music', href: '/ai-music' },
   { label: 'AI Voice', href: '/ai-voice' },
   { label: 'Story Creator', href: '/stories' },
+  { label: 'Viral Clip Extractor', href: '/tools/clip-extractor' },
+  { label: 'Animated Captions', href: '/tools/captions' },
+  { label: 'Finance Video', href: '/tools/finance-video' },
+  { label: 'Brand Kit', href: '/tools/brand-kit' },
   { label: 'AI Upscaler', href: '/tools/upscaler' },
   { label: 'Video Downloader', href: '/tools/video-downloader' },
 ];
@@ -115,7 +119,7 @@ export default function Footer() {
             © {new Date().getFullYear()} MotionForce. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center">
-            {['Sora 2', 'VEO 3.1', 'Kling 3.0', 'Flux Pro', 'Imagen 4', 'ElevenLabs', 'Suno AI'].map((m) => (
+            {['Sora 2', 'VEO 3.1', 'Kling 3.0', 'Flux Pro', 'Imagen 4', 'ElevenLabs', 'Suno AI', 'Whisper', 'GPT-4'].map((m) => (
               <span key={m} className="text-xs text-zinc-700">{m}</span>
             ))}
           </div>

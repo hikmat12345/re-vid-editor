@@ -82,6 +82,43 @@ export const API_TOOLS = {
   DOWNLOADER_DOWNLOAD: `${BACKEND_URL}/tools/downloader/download`,
 } as const;
 
+// ─── Render Queue ─────────────────────────────────────────────────────────────
+export const API_RENDER = {
+  LIST:          `${BACKEND_URL}/render`,
+  CREATE:        `${BACKEND_URL}/render`,
+  GET:           (id: string) => `${BACKEND_URL}/render/${id}`,
+  CANCEL:        (id: string) => `${BACKEND_URL}/render/${id}`,
+} as const;
+
+// ─── Template Engine ──────────────────────────────────────────────────────────
+export const API_TEMPLATES = {
+  COMPOSITIONS:  `${BACKEND_URL}/templates/compositions`,
+  RENDER:        `${BACKEND_URL}/templates/render`,
+} as const;
+
+// ─── Brand Kit ────────────────────────────────────────────────────────────────
+export const API_BRAND_KIT = {
+  GET:           `${BACKEND_URL}/brand-kit`,
+  UPSERT:        `${BACKEND_URL}/brand-kit`,
+} as const;
+
+// ─── Clip Extractor ───────────────────────────────────────────────────────────
+export const API_CLIP_EXTRACTOR = {
+  EXTRACT:       `${BACKEND_URL}/clip-extractor/extract`,
+} as const;
+
+// ─── Caption Engine ───────────────────────────────────────────────────────────
+export const API_CAPTIONS = {
+  STYLES:        `${BACKEND_URL}/captions/styles`,
+  ADD:           `${BACKEND_URL}/captions`,
+} as const;
+
+// ─── Finance Templates ────────────────────────────────────────────────────────
+export const API_FINANCE = {
+  CHART_TYPES:   `${BACKEND_URL}/finance-templates/chart-types`,
+  CREATE:        `${BACKEND_URL}/finance-templates`,
+} as const;
+
 // ─── Video Editor (existing Next.js API routes) ───────────────────────────────
 export const API_EDITOR = {
   LAMBDA_RENDER:   '/api/latest/lambda/render',

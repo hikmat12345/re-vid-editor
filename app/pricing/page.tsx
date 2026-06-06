@@ -12,9 +12,10 @@ import { PricingInfo, PlanName } from '@/lib/types';
 
 const PLAN_FEATURES: Record<PlanName, string[]> = {
   free: [
-    '50 credits / month',
+    '100 credits / month',
     'AI image generation',
     'Basic video editor',
+    '1 concurrent render',
     'Community support',
   ],
   creator: [
@@ -23,24 +24,32 @@ const PLAN_FEATURES: Record<PlanName, string[]> = {
     'Video editor (full)',
     'AI Music & Voice',
     'Story creator',
+    'Viral clip extractor',
+    'Animated captions (7 styles)',
+    '3 concurrent renders',
     'Priority support',
   ],
   pro: [
-    '3,500 credits / month',
+    '5,000 credits / month',
     'Everything in Creator',
     'AI Upscaler (2x & 4x)',
     'Watermark remover',
-    'Video downloader',
-    'Faster generation queue',
+    'Finance video generator',
+    'Brand kit',
+    '4K renders',
+    '10 concurrent renders',
+    'Priority queue',
     'Priority support',
   ],
   agency: [
-    '12,000 credits / month',
+    'Unlimited credits',
     'Everything in Pro',
     'API access',
+    'White-label output',
+    '10 team seats',
+    '50 concurrent renders',
     'Dedicated support',
     'Custom integrations',
-    'Team seat (coming soon)',
   ],
 };
 
@@ -106,10 +115,10 @@ export default function PricingPage() {
   };
 
   const plans = pricingInfo?.plans ?? {
-    free:    { creditsMonthly: 50,    priceUsd: 0,   label: 'Free' },
-    creator: { creditsMonthly: 1000,  priceUsd: 19,  label: 'Creator' },
-    pro:     { creditsMonthly: 3500,  priceUsd: 49,  label: 'Pro' },
-    agency:  { creditsMonthly: 12000, priceUsd: 149, label: 'Agency' },
+    free:    { creditsMonthly: 100,    priceUsd: 0,   label: 'Free' },
+    creator: { creditsMonthly: 1000,   priceUsd: 29,  label: 'Creator' },
+    pro:     { creditsMonthly: 5000,   priceUsd: 79,  label: 'Pro' },
+    agency:  { creditsMonthly: 999999, priceUsd: 199, label: 'Agency' },
   };
 
   return (
@@ -157,7 +166,7 @@ export default function PricingPage() {
                   {plan.priceUsd > 0 && <span className="text-zinc-500 text-sm">/mo</span>}
                 </div>
                 <p className="text-xs text-zinc-500 mb-5 pb-5 border-b border-zinc-800">
-                  {plan.creditsMonthly.toLocaleString()} credits / month
+                  {plan.creditsMonthly >= 999999 ? 'Unlimited' : plan.creditsMonthly.toLocaleString()} credits / month
                 </p>
 
                 <ul className="space-y-2.5 mb-6">
