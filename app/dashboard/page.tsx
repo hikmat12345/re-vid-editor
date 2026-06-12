@@ -12,6 +12,7 @@ import {
   Video,
   ArrowRight,
   Sparkles,
+  Clapperboard,
 } from 'lucide-react';
 import { DashboardLayout } from '@/components/shared/dashboard-layout';
 import { useAuth } from '@/contexts/auth-context';
@@ -20,12 +21,12 @@ import { API_STORIES, API_PROJECTS } from '@/lib/constants/api';
 import { Story, ProjectItem } from '@/lib/types';
 
 const QUICK_ACTIONS = [
-  { label: 'AI Studio',      description: 'Generate images & videos', href: '/ai-studio',       icon: ImageIcon, color: 'from-violet-500/20' },
-  { label: 'AI Music',       description: 'Create tracks with Suno',  href: '/ai-music',        icon: Music,     color: 'from-blue-500/20' },
-  { label: 'AI Voice',       description: 'TTS, SFX & voice clone',   href: '/ai-voice',        icon: Mic,       color: 'from-green-500/20' },
-  { label: 'Video Editor',   description: 'Edit with timeline',        href: '/editor',          icon: Video,     color: 'from-orange-500/20' },
-  { label: 'ASMR Creator',  description: 'Generate ASMR videos',     href: '/stories/asmr',    icon: Sparkles,  color: 'from-pink-500/20' },
-  { label: 'AI Upscaler',    description: 'Enhance video quality',    href: '/tools/upscaler',  icon: Wand2,     color: 'from-yellow-500/20' },
+  { label: 'Raw to Video',   description: 'Upload clips & script → video', href: '/tools/raw-to-video', icon: Clapperboard, color: 'from-violet-500/20' },
+  { label: 'AI Studio',      description: 'Generate images & videos',      href: '/ai-studio',          icon: ImageIcon,    color: 'from-indigo-500/20' },
+  { label: 'AI Music',       description: 'Create tracks with Suno',       href: '/ai-music',           icon: Music,        color: 'from-blue-500/20' },
+  { label: 'AI Voice',       description: 'TTS, SFX & voice clone',        href: '/ai-voice',           icon: Mic,          color: 'from-green-500/20' },
+  { label: 'Video Editor',   description: 'Edit with timeline',             href: '/editor',             icon: Video,        color: 'from-orange-500/20' },
+  { label: 'ASMR Creator',   description: 'Generate ASMR videos',          href: '/stories/asmr',       icon: Sparkles,     color: 'from-pink-500/20' },
 ];
 
 export default function DashboardPage() {

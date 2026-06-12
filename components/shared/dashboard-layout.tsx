@@ -21,6 +21,7 @@ import {
   BarChart3,
   PlaySquare,
   TrendingUp,
+  Clapperboard,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/auth-context';
 import { cn } from '@/lib/utils';
@@ -70,6 +71,7 @@ const NAV: NavSection[] = [
   {
     title: 'Video Tools',
     items: [
+      { label: 'Raw to Video',    href: '/tools/raw-to-video',      icon: Clapperboard, badge: 'New' },
       { label: 'Brand Kit',       href: '/tools/brand-kit',         icon: Palette },
       { label: 'Clip Extractor',  href: '/tools/clip-extractor',    icon: Scissors, badge: 'AI' },
       { label: 'Captions',        href: '/tools/captions',          icon: Captions, badge: 'AI' },
